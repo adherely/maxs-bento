@@ -26,10 +26,11 @@ export default {
   z-index: 4;
   height: 67vh;
   width: 91vw;
-  background-color: white;
+  background-color: $white;
   border-radius: 10px;
   border: 1px solid red;
   transition: all 0.2s ease;
+  display: none;
 }
 
 /* consistent size ratio */

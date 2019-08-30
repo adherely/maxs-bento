@@ -132,6 +132,10 @@ export default { name: 'CardGridContainer' }
 }
 }
 @media only screen and (min-device-width: 665px) and (max-device-width: 840px) and (orientation: landscape) {
+.card-container {
+  margin-right: 10%;
+  margin-left: 10%;
+}
 .card {
   height: 68vh;
 }

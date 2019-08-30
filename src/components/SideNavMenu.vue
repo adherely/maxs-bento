@@ -39,7 +39,7 @@ export default {
   height: 100vh;
   width: 13rem;
   left: -100%;
-  background-color: white;
+  background-color: $lightgreen;
   z-index: 3;
   transition: all 0.3s ease;
 }
