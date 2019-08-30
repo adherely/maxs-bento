@@ -1,0 +1,21 @@
+
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+
+$darkgreen: #47A1A9;
+$lightgreen: #E3F7F7;
+
+.svg {
+  height: auto;
+  width: 55%;
+}
+
+.exit-btn {
+  height: auto;
+  width: 3rem;
+  top: 1vh;
+  right: 1vw;
+  position: fixed;
+  outline: none;
+  z-index: 3;
+}

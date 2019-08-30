@@ -1,10 +1,15 @@
 <template>
   <div id="app">
-    <nav-bar></nav-bar>
-    <div class="main-wrapper">
-      <router-view />
+    <!-- <nav-bar></nav-bar> -->
+    <!-- <div class="main-wrapper"> <router-view />  </div> -->
+    <SideNavMenu />
+    <div class='header-background'>
+      <h1 class='title'>Adhere.ly</h1>
     </div>
-
+    <div class='main-view'>
+      <CardGridContainer />
+      <SimpleReminder />
+    </div>
     <new-content-available-toastr
       v-if="newContentAvailable"
       class="new-content-available-toastr"
@@ -23,10 +28,13 @@
 import NavBar from '@/components/NavBar'
 import NewContentAvailableToastr from '@/components/NewContentAvailableToastr'
 import AppleAddToHomeScreenModal from '@/components/AppleAddToHomeScreenModal'
+import SideNavMenu from '@/components/SideNavMenu.vue'
+import CardGridContainer from '@/components/CardGridContainer.vue'
+import SimpleReminder from '@/components/activities/SimpleReminder.vue'
 import { mapState, mapActions, mapGetters } from 'vuex'
 
 export default {
-  components: { NavBar, NewContentAvailableToastr, AppleAddToHomeScreenModal },
+  components: { NavBar, NewContentAvailableToastr, AppleAddToHomeScreenModal, SideNavMenu, CardGridContainer, SimpleReminder },
   computed: {
     ...mapGetters('app', ['newContentAvailable']),
     ...mapState('app', ['showAddToHomeScreenModalForApple', 'refreshingApp'])
@@ -39,53 +47,32 @@ export default {
 </script>
 
 <style lang="scss">
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  font-size: calc(12px + 1vw);
+}
 
-  a {
-    font-weight: 500;
-    text-decoration: none;
-  }
+.header-background {
+  text-align: center;
+  width: 100%;
+  height: 3.6rem;
+}
 
-  #app {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-size: 16px;
-    color: #2c3e50;
+.title {
+  z-index: 1;
+  font-size: 1.7rem;
+  font-family: 'Pacifico';
+  color: $darkgreen;
+  line-height: 3.4rem;
+}
 
-    .new-content-available-toastr {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-    }
-
-    .apple-add-to-home-screen-modal {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      top: 0;
-      left: 0;
-      height: fit-content;
-      width: fit-content;
-      margin: auto;
-      z-index: 1000;
-    }
-
-    .main-wrapper {
-      margin-top: 3.6rem;
-      padding: 20px;
-
-      .page-wrapper {
-        width: 60%;
-        margin: auto;
-
-        @media screen and (max-width: 1000px) {
-          width: 100%;
-        }
-      }
-    }
-  }
+.main-view {
+  background-color: $lightgreen;
+  height: 100vh;
+  width: 100%;
 }
 </style>
