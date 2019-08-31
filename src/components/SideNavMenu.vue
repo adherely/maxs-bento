@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div id='side-menu'>
-    <p class='side-menu-temp-text'>BOO!</p>
-    <div id="side-menu-btn" v-on:click='toggleSideMenu()'>
+		<div id="side-menu-btn" v-on:click='toggleSideMenu()'>
       <img src='@/assets/menu-btn.svg' class='svg'/>
     </div>
+    <div id='side-menu'>
+    	<p class='side-menu-temp-text'>BOO!</p>
     </div>
   </div>
 </template>
@@ -65,7 +65,7 @@ export default {
   justify-content: center;
   align-items: center;
   outline: none;
-  z-index: 3;
+  z-index: 4;
   transition: all 0.3s ease;
 }
 

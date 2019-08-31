@@ -1,7 +1,8 @@
 <template>
-  <div id="app">
+  <div id="app" class='app-container'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <!-- <nav-bar></nav-bar> -->
-    <!-- <div class="main-wrapper"> <router-view />  </div> -->
+    <!-- <div class="main-wrapper"> <router-view /> </div> -->
     <SideNavMenu />
     <div class='header-background'>
       <h1 class='title'>Adhere.ly</h1>
@@ -47,6 +48,9 @@ export default {
 </script>
 
 <style lang="scss">
+.app-container {
+	
+}
 * {
   margin: 0;
   padding: 0;

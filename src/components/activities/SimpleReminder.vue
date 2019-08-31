@@ -1,6 +1,6 @@
 <template>
-<div class='container'>
-  <div id='exit-btn' v-on:click='toggleModal()'>
+<div class='modal-container'>
+  <div id='exit-btn'>
     <img src='@/assets/exit-btn.svg' class='svg exit-btn'/>
   </div>
 </div>
@@ -8,17 +8,13 @@
 
 <script>
 export default {
-  name: 'SimpleReminderModal',
-  methods: {
-    toggleModal() {
-      let btn = document.getElementById('exit-btn');
-    }
-  }
+  name: 'SimpleReminder',
+
 }
 </script>
 
 <style lang='scss'>
-.container {
+.modal-container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -30,12 +26,12 @@ export default {
   border-radius: 10px;
   border: 1px solid red;
   transition: all 0.2s ease;
-  display: none;
+	display: none;
 }
 
 /* consistent size ratio */
 @media (orientation: landscape) {
-.container {
+.modal-container {
   height: 91vh;
   width: 67vw;
 }

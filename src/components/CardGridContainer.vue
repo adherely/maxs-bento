@@ -1,7 +1,7 @@
 <template>
 <div>
   <div class='card-container'>
-    <div class='card'>
+    <div class='card' v-on:click='toggleModal()'>
       <div class='card-preview-circle card-1'></div>
       <p class='card-preview-text'>Simple<br>reminder</p>
     </div>
@@ -28,7 +28,23 @@
 </template>
 
 <script>
-export default { name: 'CardGridContainer' }
+export default {
+	name: 'CardGridContainer',
+	methods: {
+    toggleModal() {
+      let btn = document.getElementById('exit-btn');
+			let modal = document.querySelector('modal-container');
+			var visibility = modal.getAttribute(true);
+			if (visibility == 'true') {
+				modal.setAttribute(true, 'false');
+				modal.style.top = '-50%';
+			} else {
+				modal.setAttribute(true, 'true');
+				modal.style.top = '50%';
+			}
+    }
+	}
+}
 </script>
 
 <style lang='scss'>
@@ -38,7 +54,6 @@ export default { name: 'CardGridContainer' }
   height: 86.5vh;
   display: grid;
   grid-template-columns: repeat(2, 0fr);
-
   grid-row-gap: 1em;
   grid-column-gap: 1em;
   justify-content: center;
@@ -132,10 +147,6 @@ export default { name: 'CardGridContainer' }
 }
 }
 @media only screen and (min-device-width: 665px) and (max-device-width: 840px) and (orientation: landscape) {
-.card-container {
-  margin-right: 10%;
-  margin-left: 10%;
-}
 .card {
   height: 68vh;
 }
