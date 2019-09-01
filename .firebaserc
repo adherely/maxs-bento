@@ -1,6 +1,7 @@
 {
   "projects": {
     "default": "bento-starter",
-    "new-adherely": "new-adherely-2e51d"
+    "new-adherely": "new-adherely-2e51d",
+    "master": "new-adherely-2e51d"
   }
 }
