@@ -49,7 +49,7 @@ export default {
 
 <style lang="scss">
 .app-container {
-	
+
 }
 * {
   margin: 0;
@@ -75,7 +75,7 @@ export default {
 }
 
 .main-view {
-  background-color: $lightgreen;
+  background-color: red;
   height: 100vh;
   width: 100%;
 }
