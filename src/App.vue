@@ -75,7 +75,6 @@ export default {
 }
 
 .main-view {
-	background-color: white;
   height: 100vh;
   width: 100%;
 }
