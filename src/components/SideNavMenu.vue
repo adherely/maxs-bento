@@ -34,12 +34,13 @@ export default {
 </script>
 
 <style lang='scss'>
+
 #side-menu {
   position: fixed;
-  height: 100vh;
+  height: 100%;
   width: 13rem;
   left: -100%;
-  background-color: $lightgreen;
+  background-color: $lightgrey;
   z-index: 3;
   transition: all 0.3s ease;
 }

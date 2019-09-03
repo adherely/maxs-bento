@@ -1,6 +1,12 @@
 <template>
   <div id="app" class='app-container'>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,
+				viewport-fit=cover">
+    <apple-add-to-home-screen-modal
+      v-if="showAddToHomeScreenModalForApple"
+      class="apple-add-to-home-screen-modal"
+      @close="closeAddToHomeScreenModalForApple(false)">
+    </apple-add-to-home-screen-modal>
     <!-- <nav-bar></nav-bar> -->
     <!-- <div class="main-wrapper"> <router-view /> </div> -->
     <SideNavMenu />
@@ -17,12 +23,6 @@
       :refreshing-app="refreshingApp"
       @refresh="serviceWorkerSkipWaiting"
     ></new-content-available-toastr>
-    <apple-add-to-home-screen-modal
-      v-if="showAddToHomeScreenModalForApple"
-      class="apple-add-to-home-screen-modal"
-      @close="closeAddToHomeScreenModalForApple(false)"
-    >
-    </apple-add-to-home-screen-modal>
   </div>
 </template>
 <script>
@@ -51,14 +51,6 @@ export default {
 .app-container {
 
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  overflow-y: hidden;
-  overflow-x: hidden;
-  font-size: calc(12px + 1vw);
-}
 
 .header-background {
   text-align: center;
@@ -67,15 +59,24 @@ export default {
 }
 
 .title {
-  z-index: 1;
   font-size: 1.7rem;
   font-family: 'Pacifico';
   color: $darkgreen;
   line-height: 3.4rem;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+	overflow: hidden;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  font-size: calc(12px + 1vw);
+}
+
 .main-view {
-	background-color: $lightgreen;
+	background-color: $white;
   height: 100vh;
   width: 100%;
 }
