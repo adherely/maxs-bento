@@ -1,16 +1,11 @@
 <template>
 <div class='modal-container'>
-  <div id='exit-btn'>
-    <img src='@/assets/exit-btn.svg' class='svg exit-btn'/>
-  </div>
+		<img src='@/assets/exit-btn.svg' class='svg exit-btn'/>
 </div>
 </template>
 
 <script>
-export default {
-  name: 'SimpleReminder',
-
-}
+export default { name: 'SimpleReminder' }
 </script>
 
 <style lang='scss'>
@@ -26,14 +21,12 @@ export default {
   border-radius: 10px;
   border: 1px solid red;
   transition: all 0.2s ease;
-	display: none;
+	//display: none;
 }
 
-/* consistent size ratio */
-@media (orientation: landscape) {
-.modal-container {
-  height: 91vh;
-  width: 67vw;
-}
+.exit-btn:active {
+	background-color: $lightgrey;
+	border-radius: 50%;
+	transform: scale(1.05);
 }
 </style>

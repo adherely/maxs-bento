@@ -1,7 +1,7 @@
 <template>
 <div>
   <div class='card-container'>
-    <div class='card' v-on:click='toggleModal()'>
+    <div class='card'>
       <div class='card-preview-circle card-1'></div>
       <p class='card-preview-text'>Simple<br>reminder</p>
     </div>
@@ -28,22 +28,7 @@
 </template>
 
 <script>
-export default {
-	name: 'CardGridContainer',
-	methods: {
-    toggleModal() {
-      let btn = document.getElementById('exit-btn');
-			let modal = document.querySelector('modal-container');
-			var visibility = modal.getAttribute(true);
-			if (visibility == 'true') {
-				modal.setAttribute(true, 'false');
-				modal.style.top = '-50%';
-			} else {
-				modal.setAttribute(true, 'true');
-				modal.style.top = '50%';
-			}
-    }
-	}
+export default { name: 'CardGridContainer', // make container and header non-scrollable
 }
 </script>
 
@@ -110,67 +95,5 @@ export default {
   font-family: 'Varela Round';
   font-size: 110%;
   line-height: 1.3em;
-}
-
-/* smartphones */
-@media only screen and (min-device-width: 300px) and (max-device-width: 1023px) and (orientation: landscape) {
- .card-container {
-  height: 70vh;
-  grid-template-columns: repeat(3, 0fr);
- }
-.card {
-  height: 13em;
-}
-}
-
-/* iPhone 5/5s/SE */
-@media all and (device-width: 320px) and (device-height: 568px) and (orientation: portrait) {
-.card-container {
-  height: 84vh;
-}
-.card {
-  height: 12em;
-  width: 9em;
-}
-}
-@media all and (device-width: 568px) and (device-height: 320px) and (orientation: landscape) {
-.card {
-  height: 12em;
-  width: 9.5em;
-}
-}
-
-/* tall smartphones */
-@media only screen and (min-device-height: 812px) and (max-device-height: 840px) and (orientation: portrait) {
-.card {
-  height: 14em;
-}
-}
-@media only screen and (min-device-width: 665px) and (max-device-width: 840px) and (orientation: landscape) {
-.card {
-  height: 68vh;
-}
-}
-
-/* iPad */
-@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
- .card-container {
-  height: 90vh;
-  grid-template-columns: repeat(2, 0fr);
- }
-}
-
-/* iPad / Desktop */
-@media all and (min-width: 630px) and (min-height: 400px) {
-.card-container {
-  grid-template-columns: repeat(3, 0fr);
-}
-}
-
-@media all and (min-width: 1100px) {
-.card-container {
-  height: 80.5vh;
-  grid-template-columns: repeat(4, 0fr);
-}
 }
 </style>

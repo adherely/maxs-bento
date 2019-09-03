@@ -5,7 +5,9 @@ module.exports = {
   css: {
     loaderOptions: {
       sass: {
-        data: `@import "@/assets/Variables.scss";`
+        data: `@import "@/assets/Variables.scss";
+							 @import "@/assets/Breakpoints.scss";
+							`
       }
     }
   },

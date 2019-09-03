@@ -48,9 +48,7 @@ export default {
 </script>
 
 <style lang="scss">
-.app-container {
-
-}
+.app-container {}
 
 .header-background {
   text-align: center;
@@ -76,7 +74,7 @@ export default {
 }
 
 .main-view {
-	background-color: $white;
+	background-color: $lightgreen;
   height: 100vh;
   width: 100%;
 }
