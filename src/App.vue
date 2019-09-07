@@ -51,7 +51,6 @@ export default {
 .app-container {
 	height: 100vh;
 	width: 100vw;
-	position: relative; 
 }
 
 .header-background {
