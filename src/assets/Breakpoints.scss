@@ -1,12 +1,13 @@
 
 /* smartphones */
 @media only screen and (min-device-width: 300px) and (max-device-width: 1023px) and (orientation: landscape) {
- .card-container {
-  height: 70vh;
+.card-container {
+  height: 71vh;
   grid-template-columns: repeat(3, 0fr);
- }
+}
 .card {
-  height: 13em;
+	height: 68vh;
+	width: 30vw;
 }
 .modal-container {
   height: 91vh;
@@ -19,22 +20,17 @@
 .card-container {
   height: 84vh;
 }
-.card {
-  height: 12em;
-  width: 9em;
 }
-}
-@media all and (device-width: 568px) and (device-height: 320px) and (orientation: landscape) {
-.card {
-  height: 12em;
-  width: 9.5em;
-}
-}
+@media all and (device-width: 568px) and (device-height: 320px) and (orientation: landscape) {}
 
 /* tall smartphones */
 @media only screen and (min-device-height: 812px) and (max-device-height: 840px) and (orientation: portrait) {
+.card-container {
+  height: 89vh;
+}
 .card {
-  height: 14em;
+	height: 28vh;
+  width: 43vw;
 }
 .modal-container {
   height: 65vh;
@@ -43,50 +39,70 @@
 }
 @media only screen and (min-device-width: 665px) and (max-device-width: 840px) and (orientation: landscape) {
 .card {
-  height: 68vh;
+	height: 68vh;
+	width: 28vw;
 }
 }
 
 /* iPad */
-@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
- .card-container {
-  height: 90vh;
-  grid-template-columns: repeat(2, 0fr);
- }
-.modal-container {
-  height: 60vh;
-  width: 70vw;
-}
-}
-@media all and (device-width: 1024px) and (device-height: 768px) and (orientation: landscape) {
- .card-container {
-  height: 84vh;
-  grid-template-columns: repeat(2, 0fr);
- }
-.modal-container {
-  height: 65vh;
-  width: 65vw;
-}
-}
-
-/* iPad / Desktop */
-@media all and (min-width: 630px) and (min-height: 400px) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (min-device-height: 768px) and (max-device-height: 1024px) and (orientation: portrait) {
 .card-container {
+  height: 89vh;
   grid-template-columns: repeat(3, 0fr);
 }
+.card {
+	height: 28vh;
+	width: 30vw;
+}
 .modal-container {
-  height: 80vh;
-  width: 50vw;
+  height: 91vh;
+  width: 67vw;
+}
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (min-device-height: 768px) and (max-device-height: 1024px) and (orientation: landscape) {
+.card-container {
+	height: 84vh;
+	grid-template-columns: repeat(4, 0fr);
+}
+.card {
+	height: 40vh;
+	width: 22vw;
+}
+.modal-container {
+  height: 91vh;
+  width: 67vw;
 }
 }
 
-@media all and (min-width: 1100px) {
+/* iPad Pro */
+@media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait) {
 .card-container {
-  height: 80.5vh;
-  grid-template-columns: repeat(4, 0fr);
+	height: 91vh;
+	grid-template-columns: repeat(3, 0fr);
 }
-.modal-container {
-  height: 80vh;
-  width: 50vw;
+.card {
+	height: 25vh;
+	width: 26vw;
+}
+}
+@media only screen and (min-device-width: 1366px) and (max-device-height: 1024px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape) {
+.card-container {
+	height: 86.5vh;
+	grid-template-columns: repeat(4, 0fr);
+}
+.card {
+	height: 37vh;
+	width: 22vw;
+}
+}
+
+/* Desktop */
+@media screen and (min-width: 1400px) {
+.card-container {
+	height: 80vh;
+}
+.card {
+	height: 40vh;
+	width: 19vw;
 }
 }

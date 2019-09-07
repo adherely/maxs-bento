@@ -48,8 +48,8 @@ export default { name: 'CardGridContainer', // make container and header non-scr
 }
 
 .card {
- height: 13.5em;
- width: 10em;
+ height: 33vh;
+ width: 43vw;
  display: flex;
  flex-direction: column;
  align-items: center;
@@ -73,9 +73,9 @@ export default { name: 'CardGridContainer', // make container and header non-scr
 }
 
 .card-preview-circle {
-  margin-top: 15%;
-  height: 5.9em;
-  width: 7.9em;
+  margin-top: 13%;
+  height: 50%;
+	width: 80%;
   border-radius: 50%;
   background-color: $lightgreen;
 }
@@ -87,7 +87,7 @@ export default { name: 'CardGridContainer', // make container and header non-scr
 
 .card-preview-text {
   position: fixed;
-  top: 85%;
+  top: 83%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;

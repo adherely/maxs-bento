@@ -70,7 +70,7 @@ export default {
 	overflow: hidden;
   overflow-y: hidden;
   overflow-x: hidden;
-  font-size: calc(12px + 1vw);
+  font-size: calc(13px + 1vw);
 }
 
 .main-view {

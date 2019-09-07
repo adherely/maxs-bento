@@ -21,7 +21,7 @@ export default { name: 'SimpleReminder' }
   border-radius: 10px;
   border: 1px solid red;
   transition: all 0.2s ease;
-	//display: none;
+	display: none;
 }
 
 .exit-btn:active {
