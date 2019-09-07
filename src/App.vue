@@ -49,7 +49,9 @@ export default {
 
 <style lang="scss">
 .app-container {
-	overflow: hidden;
+	height: 100vh;
+	width: 100vw;
+	position: relative; 
 }
 
 .header-background {
