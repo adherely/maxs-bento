@@ -48,7 +48,9 @@ export default {
 </script>
 
 <style lang="scss">
-.app-container {}
+.app-container {
+	overflow: hidden;
+}
 
 .header-background {
   text-align: center;
