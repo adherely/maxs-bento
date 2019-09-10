@@ -21,10 +21,11 @@
   height: 84vh;
 }
 }
-@media all and (device-width: 568px) and (device-height: 320px) and (orientation: landscape) {}
+//@media all and (device-width: 568px) and (device-height: 320px) and (orientation: landscape) {}
 
 /* tall smartphones */
 @media only screen and (min-device-height: 812px) and (max-device-height: 840px) and (orientation: portrait) {
+* { background-color: red; }
 .card-container {
   height: 89vh;
 }
