@@ -49,8 +49,6 @@ export default {
 
 <style lang="scss">
 .app-container {
-	height: 100vh;
-	width: 100vw;
 	position: fixed;
 }
 
