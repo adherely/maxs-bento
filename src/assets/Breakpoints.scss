@@ -100,6 +100,7 @@
 @media screen and (min-width: 1400px) {
 .card-container {
 	height: 80vh;
+	grid-template-columns: repeat(4, 0fr);
 }
 .card {
 	height: 40vh;

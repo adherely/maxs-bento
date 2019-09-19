@@ -7,17 +7,41 @@ $lightgreen: #E3F7F7;
 $lightgrey: #F8F8F8;
 $white: white;
 
-.svg {
-  height: auto;
-  width: 55%;
-}
-
 .exit-btn {
   height: auto;
-  width: 3rem;
+  width: 2.5rem;
   top: 1vh;
   right: 1vw;
   position: fixed;
   outline: none;
-  z-index: 3;
+	transform: scale(1);
+}
+
+.exit-btn:active {
+	transition: all 0.1s ease;
+	transform: scale(1.05);
+}
+
+.back-btn {
+	height: auto;
+	width: 1.6rem;
+	top: 2.3vh;
+  left: 1.5vw;
+	position: fixed;
+	outline: none;
+	transform: scale(1);
+}
+
+.back-btn:active {
+	transition: all 0.1s ease;
+	transform: scale(1.05);
+}
+
+.btn-shadow {
+	border-radius: 50%;
+	transition: all 0.4s ease;
+}
+
+.btn-shadow:active {
+	background-color: lightgrey;
 }

@@ -17,12 +17,10 @@
       <div class='card-preview-circle card-4'></div>
       <p class='card-preview-text'>Relaxation</p>
     </div>
-    <div class='card'></div>
-    <div class='card'></div>
-    <div class='card'></div>
-    <div class='card'></div>
-    <div class='card'></div>
-    <div class='card'></div>
+		<div class='card'></div>
+		<div class='card'></div>
+		<div class='card'></div>
+		<div class='card'></div>
   </div>
 </div>
 </template>
@@ -48,7 +46,7 @@ export default { name: 'CardGridContainer', // make container and header non-scr
 }
 
 .card {
- height: 33vh;
+ height: 30vh;
  width: 43vw;
  display: flex;
  flex-direction: column;

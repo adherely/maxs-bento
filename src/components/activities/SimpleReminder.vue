@@ -1,6 +1,8 @@
 <template>
 <div class='modal-container'>
-		<img src='@/assets/exit-btn.svg' class='svg exit-btn'/>
+	<div class='btn-shadow'></div>
+	<img src='@/assets/exit-btn.svg' class='exit-btn btn-shadow'/>
+	<img src='@/assets/back-btn.svg' class='back-btn btn-shadow'>
 </div>
 </template>
 
@@ -19,14 +21,8 @@ export default { name: 'SimpleReminder' }
   width: 91vw;
   background-color: $white;
   border-radius: 10px;
-  border: 1px solid red;
+  border: none;
   transition: all 0.2s ease;
-	display: none;
-}
-
-.exit-btn:active {
-	background-color: $lightgrey;
-	border-radius: 50%;
-	transform: scale(1.05);
+	//display: none;
 }
 </style>
